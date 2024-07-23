@@ -48,8 +48,8 @@ async def UploadFiles(Rowfile: UploadFile = File(...) , Agent:int = Form()):
     busdata.SetChaptersMustSend(ChaptersMustSend)
     makeRequest.AIModel = busdata.GetAgent() 
     JsonResult = makeRequest.UploadFile(busdata.GetChaptersMustSend())
-    strResult = jsonWork.ReadJson(JsonResult)
-    return strResult
+    #strResult = jsonWork.ReadJson(JsonResult)
+    return JsonResult
     #return JSONResponse(content={"message": "Successfully Uploaded, Kick Start to start new conversion with your file"})
 
 
@@ -58,8 +58,8 @@ async def UploadFiles(Rowfile: UploadFile = File(...) , Agent:int = Form()):
 async def StartChat(Query:str = Form()):
 
     JsonResult = makeRequest.SendRequest(Query)
-    strResult = jsonWork.ReadJson(JsonResult)
-    return strResult
+    #strResult = jsonWork.ReadJson(JsonResult)
+    return JsonResult
     #return JSONResponse(content={"message": strData})
  
 

@@ -26,7 +26,7 @@ def __main__():
         #to run the server using this command 
         #uvicorn Request_Controller:app  --reload
         import uvicorn
-        uvicorn.run(app, host="0.0.0.0", port=8000)
+        uvicorn.run(app, host="0.0.0.0", port=8002)
 
 
 __main__()
